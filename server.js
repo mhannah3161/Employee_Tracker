@@ -1,5 +1,5 @@
 // import mysql2
-const mysql = require('mysql2')
+const mysql = require('mysql')
 // import inquirer 
 const inquirer = require('inquirer'); 
 // import console.table
@@ -57,19 +57,19 @@ const promptUser = () => {
     .then((answers) => {
       const { choices } = answers; 
 
-      if (choices === "View all departments") {
+      if (choices === "View departments") {
         showDepartments();
       }
 
-      if (choices === "View all roles") {
+      if (choices === "View roles") {
         showRoles();
       }
 
-      if (choices === "View all employees") {
+      if (choices === "View employees") {
         showEmployees();
       }
 
-      if (choices === "Add a department") {
+      if (choices === "Add department") {
         addDepartment();
       }
 
@@ -77,15 +77,15 @@ const promptUser = () => {
         addRole();
       }
 
-      if (choices === "Add an employee") {
+      if (choices === "Add employee") {
         addEmployee();
       }
 
-      if (choices === "Update an employee role") {
+      if (choices === "Update employee role") {
         updateEmployee();
       }
 
-      if (choices === "Update an employee manager") {
+      if (choices === "Update employee manager") {
         updateManager();
       }
 
@@ -93,15 +93,15 @@ const promptUser = () => {
         employeeDepartment();
       }
 
-      if (choices === "Delete a department") {
+      if (choices === "Delete department") {
         deleteDepartment();
       }
 
-      if (choices === "Delete a role") {
+      if (choices === "Delete role") {
         deleteRole();
       }
 
-      if (choices === "Delete an employee") {
+      if (choices === "Delete employee") {
         deleteEmployee();
       }
 
